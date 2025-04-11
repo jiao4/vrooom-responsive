@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Vrooom — Barracuda X10</title>
@@ -18,118 +19,141 @@
 
     /* HERO SECTION */
     .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('assets/mercedes-vision-avtr.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('assets/mercedes-vision-avtr.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
     }
 
     /* Optional dark overlay for unifying text+video contrast */
     .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-    z-index: 0;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      z-index: 0;
     }
 
     /* Logo - slightly rotated, floating */
     .hero-logo {
-    position: absolute;
-    left: 2px;
-    width: 30%;
-    transform: rotate(-8deg);
-    z-index: 0;
+      position: absolute;
+      left: 2px;
+      width: 30%;
+      transform: rotate(-8deg);
+      z-index: 0;
     }
 
     .hero-logo img {
-    width: 100%;
+      width: 100%;
     }
 
     /* Rotated text box */
     .hero-text {
-    position: absolute;
-    bottom: 3%;
-    left: 5%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-left: 6px solid #f6e3b4;
-    border-radius: 10px;
-    backdrop-filter: blur(1px);
-    z-index: 0;
-    
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 6px solid #f6e3b4;
+      border-radius: 10px;
+      backdrop-filter: blur(1px);
+      z-index: 0;
+
     }
 
     .hero-text h1 {
-    font-size: 3em;
-    color: #a0fcf7;
-    margin-bottom: 10px;
+      font-size: 3em;
+      color: #a0fcf7;
+      margin-bottom: 10px;
     }
 
     .hero-text p {
-    font-size: 1.2em;
-    color: #fff;
+      font-size: 1.2em;
+      color: #fff;
     }
 
     /* Tilted video box */
     .hero-video {
-    position: absolute;
-    top: 180px;
-    right: 0px;
-    width: 40%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    z-index: 0;
-    border-radius: 5px;
-    overflow: hidden;
+      position: absolute;
+      bottom: 80px;
+      /* Change */
+      right: 30px;
+      width: 40%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+      z-index: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
+      box-shadow: 5px 5px 20px rgba(206, 37, 206, 0.7);
     }
 
     .hero-video video {
-    width: 100%;
-    display: block;
-    border-radius: 2px;
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+      transition: transform 0.4s ease-in-out;
     }
+
+
 
     /* CARD SECTION */
     .card-section {
-      
-      justify-content: center;
+
+      /* justify-content: center; */
       gap: 20px;
       padding: 50px 10%;
       background-color: #ffffff;
+
+      /* NEW */
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex: 1 1 100%;
+      gap: 20px;
     }
 
     .top-card {
       background: rgb(248, 240, 194);
       border: 1px solid #f97705;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
       padding: 20px;
       width: 280px;
       transition: transform 0.3s ease;
+
+      /* NEW */
+      width: calc(33.333% - 20px);
     }
-    
+
     .card {
       background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
       padding: 20px;
       width: 280px;
       transition: transform 0.3s ease;
+
+      /* NEW */
+      width: calc(33.333% - 20px);
     }
 
     .top-card:hover {
       transform: translateY(10px);
       box-shadow: 0 12px 24px rgba(101, 247, 205, 0.1);
     }
-    
+
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
 
     .card h3 {
@@ -142,12 +166,86 @@
       color: #444;
     }
 
+
+
+    /* NEW */
+    .form-section {
+      background-color: #ffffff;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    .form-section h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .form-section label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+
+    .form-section input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+
+    .form-section input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+
+    .form-section select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .form-section input[type="radio"] {
+      margin-right: 5px;
+    }
+
+
+    .form-section button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-section button:hover {
+      background-color: #0056b3;
+    }
+
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .hero-text {
         position: static;
         margin: 20px auto;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         text-align: center;
       }
 
@@ -155,16 +253,71 @@
         position: static;
         width: 90%;
         margin: 20px auto;
+
       }
 
       .card-section {
-        
         align-items: center;
         padding: 30px 5%;
       }
+
+      /* NEW */
+      .top-card {
+        width: calc(50% - 20px);
+      }
+
+      .card {
+        width: calc(50% - 20px);
+      }
+
+    }
+
+    /* NEW */
+    @media (max-width:600px) {
+      .hero-text {
+        position: static;
+        margin: 20px auto;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+
+      .hero-video {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+
+      }
+
+      .card-section {
+        align-items: center;
+        padding: 30px 5%;
+      }
+
+      .top-card {
+        width: 100%;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+
+    /* NEW */
+    .footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      width: 100%;
+      height: 80%;
+      bottom: 0;
     }
   </style>
 </head>
+
+
+
+
 <body>
 
   <!-- HERO SECTION -->
@@ -209,7 +362,67 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Super transform</h3>
+      <p>If you have enough financial strength, we can add the ability to transform,
+        so you can have your own Optimus Prime</p>
+    </div>
+    <div class="card">
+      <h3>Become a VIP</h3>
+      <p>More consumption can make you a VIP, and future consumption will have a discount;
+        The higher the VIP level, the greater the discount</p>
+    </div>
+  </section>
+
+
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <h2> Tell us a bit more about yourself </h2>
+    <form>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+      <label for="gender">Your Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label><br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+      <label for="Suggection">What advice would you like to give us</label><br>
+      <textarea id="Suggection" name="Suggection" rows="4" cols="60"
+        placeholder="State your Suggections in several words"></textarea><br>
+
+      <label for="model">Which one fits you?</label>
+      <select id="model" required>
+        <option>I have a friend in need</option>
+        <option>Fought in the First World War</option>
+        <option>Have singled out The Homelander</option>
+        <option>Used to be a member of the Avengers</option>
+        <option>Saved the planet Cybertron</option>
+        <option>Studied Chinese Kung fu</option>
+      </select><br>
+
+      <button type="submit">Submit</button><br><br><br>
+
+    </form>
+
+
   </section>
 
 </body>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Customer is God</h3>
+    <p>Happy April Fool's Day@41.com</p>
+  </div>
+</footer>
+
+
 </html>
